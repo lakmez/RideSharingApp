@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="login" class="com.ucm.action.LoginAction" method="execute">
+			<result name="success">/home.jsp</result>
+			<result name="error" type="redirectAction">
+				
+			</result>
+		</action>
+
+		<action name="logout" class="com.ucm.action.LoginAction"
+			method="logout">
+			<result name="success">/login.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="register" class="com.ucm.action.LoginAction"
+			method="register">
+			<result name="success">/home.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="invalid">/error.jsp</result>
+		</action>
+
+		<action name="offer-ride" class="com.ucm.action.RideAction"
+			method="offer">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="request-ride" class="com.ucm.action.RideAction"
+			method="request">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="hitch-ride" class="com.ucm.action.RideAction"
+			method="hitch">
+			<result name="success">/RideDetails.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="select-ride" class="com.ucm.action.RideAction"
+			method="select">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="edit-ride" class="com.ucm.action.RideAction"
+			method="edit">
+			<result name="success">/edit.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="invalid">/error.jsp</result>
+		</action>
+		<action name="delete-offer" class="com.ucm.action.RideAction"
+			method="deleteOffer">
+			<result name="success">/edit.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="invalid">/error.jsp</result>
+		</action>
+		<action name="delete-request" class="com.ucm.action.RideAction"
+			method="deleteRequest">
+			<result name="success">/edit.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="invalid">/error.jsp</result>
+		</action>
+	</package>
+</struts>
